@@ -15,7 +15,7 @@ const jwt = require('jsonwebtoken')
 const cors = require('cors')
 
 
-const JWT_SECRET = 'NEED_HERE_A_SECRET_KEY'
+
 
 const mongoose = require('mongoose')
 
@@ -80,15 +80,14 @@ const start = async () => {
      ],
   })
   const wsServer = new WebSocketServer({
-    // This is the `httpServer` we created in a previous step.
+ 
     server: httpServer,
-    // Pass a different path here if your ApolloServer serves at
-    // a different path.
+
     path: '/graphql',
   });
   const serverCleanup = useServer({ schema }, wsServer);
   await server.start()
-  app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+  app.use(cors());
   server.applyMiddleware({
     app,
     cors: false,

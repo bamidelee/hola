@@ -7,7 +7,6 @@ const bcrypt = require('bcrypt')
 const {PubSub} = require('graphql-subscriptions')
 const pubsub = new PubSub()
 const { findById } = require('./models/user')
-const cloudinary = require('cloudinary');
 const Comment = require('./models/comments')
 const { withFilter } = require( 'graphql-subscriptions')
 const { GraphQLScalarType } = require( 'graphql')
