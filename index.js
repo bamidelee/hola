@@ -93,10 +93,10 @@ const start = async () => {
     cors: false,
     path: "/",
   });
-  const PORT = 4000
+  const PORT = process.env.PORT || 4000
 
-  httpServer.listen( process.env.PORT, '0.0.0.0', () =>
-    console.log(`Server is now running on http://localhost:${process.env.PORT}`)
+  httpServer.listen( PORT, '0.0.0.0', () =>
+    console.log(`Server is now running on http://localhost:${PORT}`)
   )
 }
 
