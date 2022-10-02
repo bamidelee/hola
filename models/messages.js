@@ -8,7 +8,7 @@ const schema = mongoose.Schema({
 
    media:{
         type: String,
-        required: true,
+
     },
 
     date: {
